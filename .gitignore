@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Build caches
+web/.vite/
+*.tsbuildinfo
+
+# Runtime writable database & logs
+out/ops.db
+out/ops.db-journal
+out/ops.db-wal
+out/ops.db-shm
+*.log
+
+# OS & Editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
