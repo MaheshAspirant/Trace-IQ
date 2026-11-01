@@ -31,14 +31,11 @@ library only, no network calls, fixed seed `20261022`.
 The React single-page application is pre-compiled into `web/dist`. Run the server using your preferred shell:
 
 ```bash
-# Windows (PowerShell)
+# PowerShell
 .\run.ps1 serve
 
-# Windows (Command Prompt)
-run.bat serve
-
-# macOS / Linux (Bash)
-./run.sh serve
+# Or directly with Python
+python src/app.py --out out --web web/dist --port 3000
 ```
 Open your browser at **[http://localhost:3000](http://localhost:3000)**.
 
@@ -47,14 +44,8 @@ Open your browser at **[http://localhost:3000](http://localhost:3000)**.
 To regenerate data, execute the 21-check validation suite, evaluate against ground truth, and run all unit tests:
 
 ```bash
-# Windows (PowerShell)
+# PowerShell
 .\run.ps1 all
-
-# Windows (Command Prompt)
-run.bat all
-
-# macOS / Linux (Bash)
-./run.sh all
 ```
 
 Expected output:

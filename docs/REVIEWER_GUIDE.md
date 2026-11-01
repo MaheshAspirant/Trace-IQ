@@ -113,3 +113,4 @@ Empirical results from the test runs:
 
 1. **Authentication & Multi-Tenancy:** The current implementation is scoped as an on-premise single-plant application without RBAC or multi-tenant user authentication. Production deployment should place the API behind an OAuth2/OIDC reverse proxy.
 2. **Streaming Telemetry Integration:** While process drift is detected via rolling statistical metrics, connecting directly to MQTT/OPC-UA industrial protocols would enable sub-second vibration and temperature anomaly detection.
+

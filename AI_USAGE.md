@@ -61,3 +61,4 @@ AI helped accelerate development, but the project required my involvement in und
 I take responsibility for the final submitted implementation and acknowledge that AI-generated outputs require independent technical review and validation.
 
 **Conclusion:** I used AI as a productivity and problem-solving tool while maintaining responsibility for the project's architecture, integration, functionality, and final quality.
+
