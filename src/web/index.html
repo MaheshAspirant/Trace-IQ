@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Defect Traceability Workbench</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">DT</div>
+      <div>
+        <h1>Defect Traceability Workbench</h1>
+        <p id="meta" class="meta">loading dataset…</p>
+      </div>
+    </div>
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="overview">Overview</button>
+      <button class="tab" data-tab="exceptions">Exceptions</button>
+      <button class="tab" data-tab="trace">Trace a defect</button>
+      <button class="tab" data-tab="suppliers">Suppliers &amp; machines</button>
+      <button class="tab" data-tab="capa">CAPA</button>
+      <button class="tab" data-tab="evaluation">Evaluation</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="panel-overview" class="panel active">
+      <div id="kpis" class="kpi-grid"></div>
+      <div class="split">
+        <div class="card">
+          <h2>Decision queue <span class="hint">latest labelled exceptions</span></h2>
+          <div id="overview-exceptions" class="table-wrap"></div>
+        </div>
+        <div class="card">
+          <h2>Supplier scorecard <span class="hint">incoming defect rate</span></h2>
+          <div id="overview-suppliers" class="table-wrap"></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Machine health <span class="hint">scrap rate and suspected drift weeks</span></h2>
+        <div id="overview-machines" class="table-wrap"></div>
+      </div>
+    </section>
+
+    <section id="panel-exceptions" class="panel">
+      <div class="card">
+        <div class="toolbar">
+          <h2>Exception queue</h2>
+          <label class="control">Kind
+            <select id="exception-kind">
+              <option value="">all</option>
+              <option value="DATA">data quality</option>
+              <option value="DECISION">decision</option>
+              <option value="INVENTORY">inventory</option>
+              <option value="TRACE">traceability</option>
+            </select>
+          </label>
+          <label class="control">Severity
+            <select id="exception-severity">
+              <option value="">all</option>
+              <option value="critical">critical</option>
+              <option value="high">high</option>
+              <option value="medium">medium</option>
+              <option value="low">low</option>
+            </select>
+          </label>
+          <span id="exception-count" class="hint"></span>
+        </div>
+        <div id="exception-table" class="table-wrap"></div>
+      </div>
+    </section>
+
+    <section id="panel-trace" class="panel">
+      <div class="card">
+        <div class="toolbar">
+          <h2>Trace a defect</h2>
+          <form id="trace-form" class="control-row">
+            <input id="defect-input" placeholder="DEF-2026-000123" spellcheck="false" />
+            <button class="primary" type="submit">Trace</button>
+            <button type="button" id="sample-defect" class="ghost">Load example</button>
+          </form>
+        </div>
+        <p class="hint">Chain: defect → inspection → process step → machine → production order →
+          consumed material lot → supplier, with the containment scope and the decision taken.</p>
+      </div>
+      <div id="trace-result"></div>
+    </section>
+
+    <section id="panel-suppliers" class="panel">
+      <div class="card">
+        <div class="toolbar">
+          <h2>Supplier scorecard</h2>
+          <span class="hint">rate = incoming defect units / inspected units</span>
+        </div>
+        <div id="supplier-table" class="table-wrap"></div>
+      </div>
+      <div class="card">
+        <div class="toolbar">
+          <h2>Machine scorecard</h2>
+          <span class="hint">scrap rate = scrapped units / input units</span>
+        </div>
+        <div id="machine-table" class="table-wrap"></div>
+      </div>
+    </section>
+
+    <section id="panel-capa" class="panel">
+      <div class="card">
+        <div class="toolbar">
+          <h2>Corrective actions</h2>
+          <span class="hint">closure requires a passed verification inspection</span>
+        </div>
+        <div id="capa-table" class="table-wrap"></div>
+      </div>
+    </section>
+
+    <section id="panel-evaluation" class="panel">
+      <div class="card">
+        <h2>Validation</h2>
+        <div id="validation-summary" class="kpi-grid small"></div>
+        <div id="validation-checks" class="table-wrap"></div>
+      </div>
+      <div class="split">
+        <div class="card">
+          <h2>Engine evaluation</h2>
+          <div id="evaluation-summary"></div>
+        </div>
+        <div class="card">
+          <h2>Anomaly detection coverage</h2>
+          <div id="coverage-table" class="table-wrap"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Synthetic dataset · deterministic seed · ground truth kept in
+    <code>ground_truth/</code> and never joined into input features.
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
