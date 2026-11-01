@@ -1,0 +1,6 @@
+defect_id,inspection_id,order_id,lot_id,step_id,machine_id,defect_code,defect_name,category,severity,qty,supplier_responsibility,detection_method,detected_at,status
+DEF-2026-001204,INSP-2026-000732-003,WO-2026-000732,,PS-2026-002770-06,MAC-012,FUN-NOISE,Abnormal noise at run-in,functional,major,1,0,functional_test,2026-04-23 12:24:32,rework
+DEF-2026-002559,INSP-2026-002371-003,WO-2026-002371,,PS-2026-000239-01,MAC-012,COS-SCRATCH,Surface scratch,cosmetic,minor,2,0,visual,2026-05-10 11:31:24,closed
+DEF-2026-003091,INSP-2026-003004-001,WO-2026-003004,,PS-2026-000151-04,MAC-017,ASM-ORIENT,Component installed in wrong orientation,assembly,major,3,0,visual,2026-03-22 11:21:28,rework
+DEF-2026-004366,INSP-2026-004582-003,WO-2026-004582,,PS-2026-004696-02,MAC-004,COS-SCRATCH,Surface scratch,cosmetic,minor,2,0,visual,2026-04-12 14:19:52,closed
+DEF-2026-002507,INSP-2026-002300-001,WO-2026-002300,,PS-2026-004783-05,MAC-020,DIM-OD-HIGH,Outside diameter above tolerance,dimensional,major,2,0,gauge,2026-06-06 10:34:30,rework

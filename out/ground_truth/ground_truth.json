@@ -1,0 +1,47 @@
+{
+  "dataset_version": "1.0.0",
+  "seed": 20261022,
+  "profile": "full",
+  "label_definitions": {
+    "DEFECT_LOT_NOT_FOUND": "defect.lot_id has no matching material_lot row (quarantine feed)",
+    "BOM_MATERIAL_NOT_CONSUMED": "completed order has a BOM line with no order_consumption row",
+    "CAPA_CLOSED_BEFORE_VERIFICATION": "capa.status=closed but closure gate fails",
+    "DEFECT_COUNT_EXCEEDS_INSPECTED_QTY": "inspection_result.defect_count > inspected_qty (quarantine feed)",
+    "TRACE_CHAIN_BREAK": "defect/step/order chain cannot be joined end to end",
+    "EXPIRED_LOT_CONSUMED": "order_consumption.consumed_at >= material_lot.expiry_date",
+    "DUPLICATE_CONSUMPTION": "same order+lot+bom+step issued twice (quarantine feed)"
+  },
+  "counts": {
+    "quarantine_defect_lot_refs": 8,
+    "quarantine_inspection_results": 6,
+    "quarantine_trace_breaks": 5,
+    "quarantine_consumption_duplicates": 5
+  },
+  "anomaly_count": 53,
+  "anomaly_counts_by_type": {
+    "BOM_MATERIAL_NOT_CONSUMED": 12,
+    "CAPA_CLOSED_BEFORE_VERIFICATION": 6,
+    "DEFECT_COUNT_EXCEEDS_INSPECTED_QTY": 6,
+    "DEFECT_LOT_NOT_FOUND": 8,
+    "DUPLICATE_CONSUMPTION": 5,
+    "EXPIRED_LOT_CONSUMED": 7,
+    "TRACE_CHAIN_BREAK": 9
+  },
+  "drift_windows": [
+    {
+      "machine_id": "MAC-002",
+      "window_start": "2026-04-01",
+      "window_end": "2026-05-13"
+    },
+    {
+      "machine_id": "MAC-017",
+      "window_start": "2026-03-16",
+      "window_end": "2026-04-13"
+    },
+    {
+      "machine_id": "MAC-023",
+      "window_start": "2026-02-15",
+      "window_end": "2026-03-15"
+    }
+  ]
+}

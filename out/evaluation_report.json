@@ -1,0 +1,138 @@
+{
+  "dataset": {
+    "profile": "full",
+    "seed": 20261022
+  },
+  "decisions": {
+    "evaluated": 4678,
+    "disposition_agreement": 1.0,
+    "capa_agreement": 0.994656,
+    "by_rule": {
+      "R3_CRITICAL_DEFECT": {
+        "total": 673,
+        "agree": 673
+      },
+      "R5_REPEAT_SUPPLIER": {
+        "total": 205,
+        "agree": 205
+      },
+      "R6_MAJOR_DEFECT": {
+        "total": 2073,
+        "agree": 2073
+      },
+      "R4_RATE_LIMIT": {
+        "total": 372,
+        "agree": 372
+      },
+      "R2_BLOCKED_SUPPLIER": {
+        "total": 83,
+        "agree": 83
+      },
+      "R7_MINOR_DEFECT": {
+        "total": 1272,
+        "agree": 1272
+      }
+    },
+    "by_capa_rule": {
+      "NONE": {
+        "total": 3777,
+        "agree": 3767
+      },
+      "C3_REPEAT_SUPPLIER": {
+        "total": 183,
+        "agree": 183
+      },
+      "C1_CRITICAL_DEFECT": {
+        "total": 485,
+        "agree": 485
+      },
+      "C2_RATE_THRESHOLD": {
+        "total": 164,
+        "agree": 164
+      },
+      "C4_PROCESS_DRIFT": {
+        "total": 69,
+        "agree": 54
+      }
+    },
+    "mismatches": []
+  },
+  "capa_gate": {
+    "evaluated": 901,
+    "agreement": 1.0,
+    "mismatches": []
+  },
+  "drift_detection": {
+    "machine_weeks_flagged": 25,
+    "labelled_machine_weeks": 17,
+    "labelled_machine_weeks_total": 17,
+    "evaluable_coverage": 1.0,
+    "true_positive": 11,
+    "false_positive": 14,
+    "false_negative": 6,
+    "precision": 0.44,
+    "recall": 0.6471,
+    "f1": 0.5238
+  },
+  "anomaly_detection": {
+    "BOM_MATERIAL_NOT_CONSUMED": {
+      "labelled": 12,
+      "detected": 12,
+      "matched": 12,
+      "missed": [],
+      "extra": []
+    },
+    "CAPA_CLOSED_BEFORE_VERIFICATION": {
+      "labelled": 6,
+      "detected": 6,
+      "matched": 6,
+      "missed": [],
+      "extra": []
+    },
+    "DEFECT_COUNT_EXCEEDS_INSPECTED_QTY": {
+      "labelled": 6,
+      "detected": 6,
+      "matched": 6,
+      "missed": [],
+      "extra": []
+    },
+    "DEFECT_LOT_NOT_FOUND": {
+      "labelled": 8,
+      "detected": 8,
+      "matched": 8,
+      "missed": [],
+      "extra": []
+    },
+    "DUPLICATE_CONSUMPTION": {
+      "labelled": 5,
+      "detected": 5,
+      "matched": 5,
+      "missed": [],
+      "extra": []
+    },
+    "EXPIRED_LOT_CONSUMED": {
+      "labelled": 7,
+      "detected": 7,
+      "matched": 7,
+      "missed": [],
+      "extra": []
+    },
+    "TRACE_CHAIN_BREAK": {
+      "labelled": 9,
+      "detected": 9,
+      "matched": 9,
+      "missed": [],
+      "extra": []
+    }
+  },
+  "supplier_rate_measurement": {
+    "suppliers": 50,
+    "mean_absolute_error": 0.023585,
+    "pearson_r": 0.9095
+  },
+  "validation": {
+    "total": 21,
+    "passed": 21,
+    "failed": 0
+  }
+}

@@ -1,0 +1,4 @@
+machine_id,window_start,window_end,expected_label,scrap_multiplier
+MAC-002,2026-04-01,2026-05-13,DRIFT,4
+MAC-017,2026-03-16,2026-04-13,DRIFT,4
+MAC-023,2026-02-15,2026-03-15,DRIFT,4

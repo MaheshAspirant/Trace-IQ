@@ -1,0 +1,28 @@
+{
+  "profile": "starter",
+  "seed": 20261022,
+  "row_counts": {
+    "product": 20,
+    "supplier": 8,
+    "supplier_material": 17,
+    "bom_line": 66,
+    "machine": 8,
+    "inspection_plan": 60,
+    "material_lot": 60,
+    "production_order": 120,
+    "process_step": 533,
+    "order_consumption": 471,
+    "inspection_result": 400,
+    "defect": 85,
+    "capa": 19,
+    "order_event": 522,
+    "lot_event": 203,
+    "capa_event": 43,
+    "anomaly_register": 53
+  },
+  "identical_row_counts": true,
+  "files_compared": 46,
+  "identical_files": 46,
+  "differing_files": [],
+  "reproducible": true
+}

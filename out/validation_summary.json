@@ -1,0 +1,273 @@
+{
+  "dataset": {
+    "profile": "full",
+    "seed": 20261022,
+    "row_counts": {
+      "product": 200,
+      "supplier": 50,
+      "supplier_material": 179,
+      "bom_line": 723,
+      "machine": 30,
+      "inspection_plan": 600,
+      "material_lot": 2000,
+      "production_order": 5000,
+      "process_step": 23918,
+      "order_consumption": 25705,
+      "inspection_result": 20000,
+      "defect": 4678,
+      "capa": 901,
+      "order_event": 22618,
+      "lot_event": 6954,
+      "capa_event": 2484,
+      "anomaly_register": 53
+    }
+  },
+  "generated_at": "2026-10-22",
+  "summary": {
+    "total": 21,
+    "passed": 21,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "id": "A1",
+      "category": "artefacts",
+      "name": "Required output files exist",
+      "status": "PASS",
+      "expected": "44 required files",
+      "actual": "all present",
+      "detail": ""
+    },
+    {
+      "id": "A2",
+      "category": "artefacts",
+      "name": "SQLite schema matches documented columns",
+      "status": "PASS",
+      "expected": "column lists identical",
+      "actual": "identical",
+      "detail": ""
+    },
+    {
+      "id": "K1",
+      "category": "keys",
+      "name": "Primary keys are unique and present",
+      "status": "PASS",
+      "expected": "0 duplicates / 0 empty",
+      "actual": "clean",
+      "detail": ""
+    },
+    {
+      "id": "K2",
+      "category": "keys",
+      "name": "Foreign keys resolve for every relationship",
+      "status": "PASS",
+      "expected": "30 relationships",
+      "actual": "all resolved",
+      "detail": ""
+    },
+    {
+      "id": "K3",
+      "category": "keys",
+      "name": "Business/natural keys are unique",
+      "status": "PASS",
+      "expected": "0 duplicates",
+      "actual": "clean",
+      "detail": ""
+    },
+    {
+      "id": "K4",
+      "category": "nomenclature",
+      "name": "Identifiers follow the documented formats",
+      "status": "PASS",
+      "expected": "SKU/SUP/LOT/WO/INSP/DEF/CAPA patterns",
+      "actual": "conformant",
+      "detail": ""
+    },
+    {
+      "id": "E1",
+      "category": "domains",
+      "name": "Categorical values stay inside allowed domains",
+      "status": "PASS",
+      "expected": "documented enum sets",
+      "actual": "conformant",
+      "detail": ""
+    },
+    {
+      "id": "D1",
+      "category": "dates",
+      "name": "Date ordering and reference-window rules hold",
+      "status": "PASS",
+      "expected": "0 violations",
+      "actual": "clean",
+      "detail": ""
+    },
+    {
+      "id": "R1",
+      "category": "reconciliation",
+      "name": "Lot balances reconcile exactly",
+      "status": "PASS",
+      "expected": "received = consumed + remaining; no over-consumption",
+      "actual": "balanced",
+      "detail": ""
+    },
+    {
+      "id": "R2",
+      "category": "reconciliation",
+      "name": "Step and order quantities reconcile",
+      "status": "PASS",
+      "expected": "input=output+scrap; good+scrap=actual; scrap=step+final scrap",
+      "actual": "reconciled",
+      "detail": ""
+    },
+    {
+      "id": "R3",
+      "category": "reconciliation",
+      "name": "Inspection defect counts and rates derive from defect events",
+      "status": "PASS",
+      "expected": "derived values consistent for every inspection",
+      "actual": "consistent",
+      "detail": ""
+    },
+    {
+      "id": "R4",
+      "category": "dates",
+      "name": "Material is issued only after receipt and inside shelf life (aside from labelled exceptions)",
+      "status": "PASS",
+      "expected": "0 unlabelled timing violations",
+      "actual": "clean",
+      "detail": "lots with post-expiry consumption: 7 (labelled 7)"
+    },
+    {
+      "id": "L1",
+      "category": "lifecycle",
+      "name": "Order state is consistent with its child records",
+      "status": "PASS",
+      "expected": "0 inconsistencies",
+      "actual": "consistent",
+      "detail": ""
+    },
+    {
+      "id": "L2",
+      "category": "lifecycle",
+      "name": "Lot status derives from consumption and inspection",
+      "status": "PASS",
+      "expected": "0 inconsistencies",
+      "actual": "consistent",
+      "detail": ""
+    },
+    {
+      "id": "L3",
+      "category": "lifecycle",
+      "name": "CAPA closure requires verification (labelled bypasses only)",
+      "status": "PASS",
+      "expected": "6 labelled bypasses",
+      "actual": "6 detected",
+      "detail": ""
+    },
+    {
+      "id": "L4",
+      "category": "lifecycle",
+      "name": "State-change events form a monotonic, connected history",
+      "status": "PASS",
+      "expected": "0 broken chains",
+      "actual": "consistent",
+      "detail": ""
+    },
+    {
+      "id": "G1",
+      "category": "ground_truth",
+      "name": "Ground truth is physically separated from input features",
+      "status": "PASS",
+      "expected": "no label columns in csv/",
+      "actual": "clean",
+      "detail": "6 ground_truth files kept outside csv/"
+    },
+    {
+      "id": "G2",
+      "category": "anomalies",
+      "name": "Detection rules reproduce every labelled anomaly exactly",
+      "status": "PASS",
+      "expected": "53 labelled anomalies",
+      "actual": "53 matched",
+      "detail": "{\"BOM_MATERIAL_NOT_CONSUMED\": {\"detected\": 12, \"extra\": [], \"labelled\": 12, \"matched\": 12, \"missed\": []}, \"CAPA_CLOSED_BEFORE_VERIFICATION\": {\"detected\": 6, \"extra\": [], \"labelled\": 6, \"matched\": 6, \"missed\": []}, \"DEFECT_COUNT_EXCEEDS_INSPECTED_QTY\": {\"detected\": 6, \"extra\": [], \"labelled\": 6, \"matched\": 6, \"missed\": []}, \"DEFECT_LOT_NOT_FOUND\": {\"detected\": 8, \"extra\": [], \"labelled\": 8, \"matched\": 8, \"missed\": []}, \"DUPLICATE_CONSUMPTION\": {\"detected\": 5, \"extra\": [], \"labelled\": 5, \"matched\": 5, \"missed\": []}, \"EXPIRED_LOT_CONSUMED\": {\"detected\": 7, \"extra\": [], \"labelled\": 7, \"matched\": 7, \"missed\": []}, \"TRACE_CHAIN_BREAK\": {\"detected\": 9, \"extra\": [], \"labelled\": 9, \"matched\": 9, \"missed\": []}}"
+    },
+    {
+      "id": "G3",
+      "category": "anomalies",
+      "name": "All required edge cases are present and labelled",
+      "status": "PASS",
+      "expected": "5 required issue types",
+      "actual": "7 types present",
+      "detail": ""
+    },
+    {
+      "id": "A3",
+      "category": "reproducibility",
+      "name": "Manifest checksums match the exported files",
+      "status": "PASS",
+      "expected": "47 files",
+      "actual": "all match",
+      "detail": ""
+    },
+    {
+      "id": "A4",
+      "category": "artefacts",
+      "name": "Requested full volumes are produced exactly",
+      "status": "PASS",
+      "expected": "{\"product\": 200, \"supplier\": 50, \"material_lot\": 2000, \"production_order\": 5000, \"inspection_result\": 20000}",
+      "actual": "exact",
+      "detail": ""
+    }
+  ],
+  "anomaly_coverage": {
+    "BOM_MATERIAL_NOT_CONSUMED": {
+      "labelled": 12,
+      "detected": 12,
+      "matched": 12,
+      "missed": [],
+      "extra": []
+    },
+    "CAPA_CLOSED_BEFORE_VERIFICATION": {
+      "labelled": 6,
+      "detected": 6,
+      "matched": 6,
+      "missed": [],
+      "extra": []
+    },
+    "DEFECT_COUNT_EXCEEDS_INSPECTED_QTY": {
+      "labelled": 6,
+      "detected": 6,
+      "matched": 6,
+      "missed": [],
+      "extra": []
+    },
+    "DEFECT_LOT_NOT_FOUND": {
+      "labelled": 8,
+      "detected": 8,
+      "matched": 8,
+      "missed": [],
+      "extra": []
+    },
+    "DUPLICATE_CONSUMPTION": {
+      "labelled": 5,
+      "detected": 5,
+      "matched": 5,
+      "missed": [],
+      "extra": []
+    },
+    "EXPIRED_LOT_CONSUMED": {
+      "labelled": 7,
+      "detected": 7,
+      "matched": 7,
+      "missed": [],
+      "extra": []
+    },
+    "TRACE_CHAIN_BREAK": {
+      "labelled": 9,
+      "detected": 9,
+      "matched": 9,
+      "missed": [],
+      "extra": []
+    }
+  }
+}

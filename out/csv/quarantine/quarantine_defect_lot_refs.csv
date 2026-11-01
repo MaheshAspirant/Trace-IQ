@@ -1,0 +1,9 @@
+defect_id,inspection_id,order_id,lot_id,step_id,machine_id,defect_code,defect_name,category,severity,qty,supplier_responsibility,detection_method,detected_at,status
+DEF-2026-001586,INSP-2026-001183-001,WO-2026-001183,LOT-SUP-9999-2026-000001,PS-2026-001183-02,MAC-025,ASM-TORQUE,Fastener torque out of specification,assembly,major,1,0,visual,2026-09-21 11:49:39,rework
+DEF-2026-001726,INSP-2026-001365-004,WO-2026-001365,LOT-SUP-9999-2026-000001,,,DOC-CERT,Supplier certificate missing or incomplete,documentation,major,2,0,certificate_review,2026-01-26 13:00:00,rework
+DEF-2026-003091,INSP-2026-003004-001,WO-2026-003004,LOT-SUP-9999-2026-000001,PS-2026-003004-01,MAC-017,ASM-ORIENT,Component installed in wrong orientation,assembly,major,3,0,visual,2026-03-22 11:21:28,rework
+DEF-2026-000249,INSP-SUP-0013-2026-000021-001,,LOT-SUP-9999-2026-000001,,,PKG-LABEL,Label / lot code mismatch,documentation,major,3,1,certificate_review,2026-06-20 12:00:00,contained
+DEF-2026-002438,INSP-2026-002229-004,WO-2026-002229,LOT-SUP-9999-2026-000001,,,COS-SCRATCH,Surface scratch,cosmetic,minor,2,0,visual,2026-09-15 15:00:00,closed
+DEF-2026-001640,INSP-2026-001270-003,WO-2026-001270,LOT-SUP-9999-2026-000001,PS-2026-001270-03,MAC-004,DIM-BORE-LOW,Bore diameter below tolerance,dimensional,major,1,0,gauge,2026-04-14 14:36:33,rework
+DEF-2026-003600,INSP-2026-003631-003,WO-2026-003631,LOT-SUP-9999-2026-000001,,,COS-SCRATCH,Surface scratch,cosmetic,minor,3,0,visual,2026-02-26 12:00:00,closed
+DEF-2026-001950,INSP-2026-001610-001,WO-2026-001610,LOT-SUP-9999-2026-000001,PS-2026-001610-01,MAC-020,DIM-OD-HIGH,Outside diameter above tolerance,dimensional,major,1,0,gauge,2026-07-28 09:03:01,rework

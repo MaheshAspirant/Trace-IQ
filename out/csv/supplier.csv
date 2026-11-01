@@ -1,0 +1,51 @@
+supplier_id,name,supplier_type,country,risk_tier,qualification_state,approved_on,lead_time_days,effective_from,effective_to,quality_contact_role
+SUP-0001,Nordwerk Raw Material 001,raw_material,IN,A,approved,2023-01-25,47,2023-01-25,,Supplier Quality Engineer
+SUP-0002,Baltic Raw Material 002,raw_material,CZ,A,approved,2023-02-05,19,2023-02-05,,Supplier Quality Engineer
+SUP-0003,Prairie Component 003,component,CZ,A,approved,2024-06-07,18,2024-06-07,,Supplier Quality Engineer
+SUP-0004,Monterrey Raw Material 004,raw_material,US,B,approved,2024-05-03,53,2024-05-03,,Supplier Quality Engineer
+SUP-0005,Praha Component 005,component,DE,B,approved,2023-06-01,14,2023-06-01,,Supplier Quality Engineer
+SUP-0006,Pacific Raw Material 006,raw_material,IN,A,approved,2025-05-21,44,2025-05-21,,Supplier Quality Engineer
+SUP-0007,Rhein Raw Material 007,raw_material,BR,B,approved,2024-06-27,9,2024-06-27,,Supplier Quality Engineer
+SUP-0008,Vistula Raw Material 008,raw_material,IT,C,approved,2024-02-21,54,2024-02-21,,Supplier Quality Engineer
+SUP-0009,Andes Component 009,component,IN,A,approved,2024-06-23,15,2024-06-23,,Supplier Quality Engineer
+SUP-0010,Sakura Service 010,service,VN,A,conditional,2023-10-30,14,2023-10-30,,Supplier Quality Engineer
+SUP-0011,Danube Raw Material 011,raw_material,IT,B,approved,2023-10-21,58,2023-10-21,,Supplier Quality Engineer
+SUP-0012,Atlas Raw Material 012,raw_material,IT,C,conditional,2023-06-03,11,2023-06-03,,Supplier Quality Engineer
+SUP-0013,Nordwerk Raw Material 013,raw_material,IN,C,blocked,2024-02-09,29,2024-02-09,,Supplier Quality Engineer
+SUP-0014,Baltic Component 014,component,IN,A,approved,2024-05-12,26,2024-05-12,,Supplier Quality Engineer
+SUP-0015,Prairie Component 015,component,IT,B,approved,2023-06-13,12,2023-06-13,,Supplier Quality Engineer
+SUP-0016,Monterrey Component 016,component,IT,B,approved,2024-08-26,12,2024-08-26,,Supplier Quality Engineer
+SUP-0017,Praha Packaging 017,packaging,VN,B,approved,2024-09-04,33,2024-09-04,,Supplier Quality Engineer
+SUP-0018,Pacific Packaging 018,packaging,MX,A,approved,2024-12-06,38,2024-12-06,,Supplier Quality Engineer
+SUP-0019,Rhein Raw Material 019,raw_material,MX,B,approved,2024-08-15,41,2024-08-15,,Supplier Quality Engineer
+SUP-0020,Vistula Packaging 020,packaging,DE,C,approved,2024-12-02,47,2024-12-02,,Supplier Quality Engineer
+SUP-0021,Andes Component 021,component,IT,C,approved,2024-07-03,47,2024-07-03,,Supplier Quality Engineer
+SUP-0022,Sakura Component 022,component,PL,B,approved,2025-04-14,34,2025-04-14,,Supplier Quality Engineer
+SUP-0023,Danube Packaging 023,packaging,MX,A,approved,2024-12-27,30,2024-12-27,,Supplier Quality Engineer
+SUP-0024,Atlas Service 024,service,DE,A,approved,2023-05-20,26,2023-05-20,,Supplier Quality Engineer
+SUP-0025,Nordwerk Component 025,component,CZ,A,approved,2024-10-21,15,2024-10-21,,Supplier Quality Engineer
+SUP-0026,Baltic Component 026,component,DE,B,approved,2025-01-13,34,2025-01-13,,Supplier Quality Engineer
+SUP-0027,Prairie Packaging 027,packaging,VN,A,approved,2025-04-22,51,2025-04-22,,Supplier Quality Engineer
+SUP-0028,Monterrey Service 028,service,PL,B,approved,2025-01-28,16,2025-01-28,,Supplier Quality Engineer
+SUP-0029,Praha Component 029,component,DE,C,conditional,2024-07-14,44,2024-07-14,,Supplier Quality Engineer
+SUP-0030,Pacific Raw Material 030,raw_material,CZ,A,approved,2024-12-09,17,2024-12-09,,Supplier Quality Engineer
+SUP-0031,Rhein Raw Material 031,raw_material,PL,B,conditional,2024-08-31,27,2024-08-31,,Supplier Quality Engineer
+SUP-0032,Vistula Service 032,service,CZ,B,approved,2024-04-22,24,2024-04-22,,Supplier Quality Engineer
+SUP-0033,Andes Component 033,component,IT,B,approved,2023-03-15,50,2023-03-15,,Supplier Quality Engineer
+SUP-0034,Sakura Raw Material 034,raw_material,CN,B,approved,2023-09-01,44,2023-09-01,,Supplier Quality Engineer
+SUP-0035,Danube Component 035,component,IT,A,approved,2025-02-07,46,2025-02-07,,Supplier Quality Engineer
+SUP-0036,Atlas Raw Material 036,raw_material,IN,A,approved,2024-07-25,29,2024-07-25,,Supplier Quality Engineer
+SUP-0037,Nordwerk Component 037,component,IT,C,approved,2023-10-31,11,2023-10-31,,Supplier Quality Engineer
+SUP-0038,Baltic Raw Material 038,raw_material,PL,A,approved,2023-09-21,26,2023-09-21,,Supplier Quality Engineer
+SUP-0039,Prairie Raw Material 039,raw_material,PL,C,approved,2023-05-11,21,2023-05-11,,Supplier Quality Engineer
+SUP-0040,Monterrey Component 040,component,MX,B,approved,2023-09-21,8,2023-09-21,,Supplier Quality Engineer
+SUP-0041,Praha Raw Material 041,raw_material,US,B,conditional,2023-01-16,29,2023-01-16,,Supplier Quality Engineer
+SUP-0042,Pacific Component 042,component,IT,A,approved,2023-05-01,25,2023-05-01,,Supplier Quality Engineer
+SUP-0043,Rhein Component 043,component,CN,B,approved,2023-05-14,56,2023-05-14,,Supplier Quality Engineer
+SUP-0044,Vistula Component 044,component,DE,B,approved,2023-03-07,28,2023-03-07,,Supplier Quality Engineer
+SUP-0045,Andes Packaging 045,packaging,IT,B,conditional,2024-09-01,51,2024-09-01,,Supplier Quality Engineer
+SUP-0046,Sakura Component 046,component,VN,A,approved,2024-07-03,37,2024-07-03,,Supplier Quality Engineer
+SUP-0047,Danube Raw Material 047,raw_material,DE,A,approved,2024-06-12,55,2024-06-12,,Supplier Quality Engineer
+SUP-0048,Atlas Raw Material 048,raw_material,BR,A,approved,2025-05-14,37,2025-05-14,,Supplier Quality Engineer
+SUP-0049,Nordwerk Component 049,component,MX,A,approved,2024-12-16,49,2024-12-16,,Supplier Quality Engineer
+SUP-0050,Baltic Raw Material 050,raw_material,BR,C,approved,2023-09-10,22,2023-09-10,,Supplier Quality Engineer
